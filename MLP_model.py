@@ -2,7 +2,7 @@ import get_prices as hist
 import tensorflow as tf
 from preprocessing import DataProcessing
 # import pandas_datareader.data as pdr if using the single test below
-import fix_yahoo_finance as fix
+import yfinance as fix
 fix.pdr_override()
 
 start = "2003-01-01"

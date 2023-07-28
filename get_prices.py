@@ -1,5 +1,5 @@
 import pandas_datareader.data as pdr
-import fix_yahoo_finance as fix
+import yfinance as fix
 import time
 fix.pdr_override()
 
@@ -17,6 +17,7 @@ def get_stock_data(ticker, start_date, end_date):
     """
     i = 1
     try:
+        # Fetches data using the Pandas Data Reader
         all_data = pdr.get_data_yahoo(ticker, start_date, end_date)
     except ValueError:
         print("ValueError, trying again")
